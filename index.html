@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>franciscopablorusso.it - a new era of automation.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Qui va Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 
@@ -19,21 +23,64 @@
 
 
 
-<body>
-    <nav>
-        <ul>
-            <li class="active"><a href="index.html" style="text-decoration: none; color:rgb(33, 186, 224); font-family: Arial, Helvetica, sans-serif">Home</a></li>
-            <li><a href="about.html" style="text-decoration: none; color:rgb(33, 186, 224); font-family: Arial, Helvetica, sans-serif">About</a></li>
-            <li><a href="contact.html" style="text-decoration: none; color:rgb(33, 186, 224); font-family: Arial, Helvetica, sans-serif">Contact</a></li>
-            <li><a href="blog.html" style="text-decoration: none; color:rgb(33, 186, 224); font-family: Arial, Helvetica, sans-serif">Blog</a></li>
-            <li><a href="https://twitter.com/FranciscoPabloR" target="_blank" style="text-decoration: none; color:rgb(33, 186, 224); font-family: Arial, Helvetica, sans-serif">Twitter</a></li>
-        </ul>
-    </nav>
+    <body>
 
-    <img id="mainprofilephoto" src="profile-photo.jpg">
-    <h1 class="maintitle">franciscopablorusso.it</h1>
-    <h3 class="mainmotto">a new era of automation.</h3>
+        <nav class="nav justify-content-center">
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget finibus quam. Vestibulum vel eros et augue imperdiet lacinia in auctor magna. Ut odio nibh, consectetur eget ex dictum, lacinia rhoncus risus. Duis nec ipsum orci. Donec dictum dolor a viverra rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nisi lacus, ullamcorper sed consectetur accumsan, sollicitudin nec sapien. Cras tincidunt venenatis bibendum. Cras tincidunt, dolor vel viverra ultrices, odio metus semper lectus, id ornare diam ipsum et libero. Mauris arcu augue, eleifend nec enim ut, imperdiet porta ligula. Proin viverra orci at dui fringilla auctor. Phasellus quis diam sed felis lobortis convallis.</p>
-</body>
+            <ul class="nav justify-content-center">
+
+                <li class="nav-item, active"><a href="index.html" style="text-decoration: none; color:rgb(33, 186, 224); font-family: Arial, Helvetica, sans-serif">Home</a></li>
+                
+                <li><a href="about.html" style="text-decoration: none; color:rgb(33, 186, 224); font-family: Arial, Helvetica, sans-serif">About</a></li>
+                
+                <li><a href="contact.html" style="text-decoration: none; color:rgb(33, 186, 224); font-family: Arial, Helvetica, sans-serif">Contact</a></li>
+                
+                <li class="up"><a href="https://t.me/s/franciscopablorusso_it" target="_blank" style="text-decoration: none; color:rgb(33, 186, 224); font-family: Arial, Helvetica, sans-serif">Blog</a></li>
+                
+                <li class="up"><a href="https://twitter.com/FranciscoPabloR" target="_blank" style="text-decoration: none; color:rgb(33, 186, 224); font-family: Arial, Helvetica, sans-serif">Twitter</a></li>
+                
+                <li><a href="https://github.com/franciscopablorusso" target="_blank" style="text-decoration: none; color:rgb(33, 186, 224); font-family: Arial, Helvetica, sans-serif">GitHub</a></li>
+                
+                <li class="login"><a href="C:\Users\Meuropax\Desktop\•\DEV\HTML\franciscopablorusso.it\00 - file di sviluppo\00 - IN SVILUPPO\sign-in" target="_blank" style="text-decoration: none; color:rgb(33, 186, 224); font-family: Arial, Helvetica, sans-serif">Login</a></li>
+            
+            </ul>
+
+            
+            <div class="login">
+            
+                <script async src="https://telegram.org/js/telegram-widget.js?14" data-telegram-login="login_franciscopablorusso_it_bot" data-size="small" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+                <script type="text/javascript">
+                    function onTelegramAuth(user) {
+                        alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+                    }
+                </script>
+
+        </div>
+            
+        </nav>
+
+    
+        <!--logo, nome del sito e motto-->
+        <div class="header">
+            <img id="mainprofilephoto" src="profile-photo.jpg">
+            <h1 class="maintitle">franciscopablorusso.it</h1>
+            <h3 class="mainmotto">a new era of automation.</h3>
+        </div>
+
+    
+        <!--descrizione del sito-->
+        <div class="row">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget finibus quam. Vestibulum vel eros et augue imperdiet lacinia in auctor magna. Ut odio nibh, consectetur eget ex dictum, lacinia rhoncus risus. Duis nec ipsum orci. Donec dictum dolor a viverra rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nisi lacus, ullamcorper sed consectetur accumsan, sollicitudin nec sapien. Cras tincidunt venenatis bibendum. Cras tincidunt, dolor vel viverra ultrices, odio metus semper lectus, id ornare diam ipsum et libero. Mauris arcu augue, eleifend nec enim ut, imperdiet porta ligula. Proin viverra orci at dui fringilla auctor. Phasellus quis diam sed felis lobortis convallis.</p>
+        </div>
+
+        
+
+
+    
+        <div class="footer">
+        <p><strong>Made with ❤ and <code>code</code> by Francisco Pablo Russo © 2020</strong></p>
+        </div>
+    
+    </body>
+    
 </html>
