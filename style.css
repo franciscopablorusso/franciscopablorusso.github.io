@@ -124,7 +124,9 @@ img, #mainprofilephoto {
 div.login {
     position: right;
     text-align: right;
-    align-content: right;    
+    align-content: right;
+    width: auto;
+    height: 100%;    
 }
 
 .header {
