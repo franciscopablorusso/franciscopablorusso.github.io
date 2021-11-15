@@ -23,47 +23,60 @@
     <body>
         
         <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item has-text-info" href="index.html">
-                    Home
-                </a>
-                <a class="navbar-item has-text-info" href="https://telegra.ph/Francisco-Pablo-Russo-07-14">
-                    About
-                </a>
-                <a class="navbar-item has-text-info" href="https://t.me/s/franciscopablorusso_it">
-                    Blog
-                </a>
-
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link has-text-info">
-                        Contact
-                    </a>
-            
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item" href="mailto:franciscopablorusso@outlook.it">
-                            Email
-                        </a>
-                        <a class="navbar-item" href="https://github.com/franciscopablorusso">
-                            GitHub
-                        </a>
-                        <a class="navbar-item" href="https://twitter.com/FranciscoPabloR">
-                            Twitter
-                        </a>
-                    </div>
+            <div class="navbar-brand"> <!--sempre presente-->
+                <div>
+                    <img src="/open-iconic/svg/home.svg">
                 </div>
 
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <script async src="https://telegram.org/js/telegram-widget.js?14" data-telegram-login="login_franciscopablorusso_it_bot" data-size="small" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
-                        <script type="text/javascript">
-                            function onTelegramAuth(user) {
-                                alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-                            }
-                        </script>
-                    </div>
-                </div>
-
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item has-text-info" href="index.html">
+                        Home
+                    </a>
+                    <a class="navbar-item has-text-info" href="https://telegra.ph/Francisco-Pablo-Russo-07-14">
+                        About
+                    </a>
+                    <a class="navbar-item has-text-info" href="https://t.me/s/franciscopablorusso_it">
+                        Blog
+                    </a>
+    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link has-text-info">
+                            Contact
+                        </a>
+                
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="mailto:franciscopablorusso@outlook.it">
+                                Email
+                            </a>
+                            <a class="navbar-item" href="https://github.com/franciscopablorusso">
+                                GitHub
+                            </a>
+                            <a class="navbar-item" href="https://twitter.com/FranciscoPabloR">
+                                Twitter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <script async src="https://telegram.org/js/telegram-widget.js?14" data-telegram-login="login_franciscopablorusso_it_bot" data-size="small" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+                    <script type="text/javascript">
+                        function onTelegramAuth(user) {
+                            alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+                        }
+                    </script>
+                </div>
+            </div> 
         </nav>
 
         <!--
