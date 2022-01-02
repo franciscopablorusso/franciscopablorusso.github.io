@@ -1,210 +1,547 @@
 <!DOCTYPE html>
-<html id="dark-html">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>franciscopablorusso.it - a new era of automation</title>
+    <link rel="shortcut icon" href="img/icon.ico" /> <!-- qui fa la favicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css"/>
 
-    <head>    
-        <!--Qui va Bulma-->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>franciscopablorusso.it - a new era of automation.</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <!--Bulma prefer dark mode plugin-->
+    <!-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark" /> -->
+
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/0246cf5ea7.js" crossorigin="anonymous"></script>
+
+    <!-- toggleBurger() & toggleDarkMode() implementation -->
+    <script>
+      // attiva e disattiva il burger menu
+      document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+      });
+
+
+      // attiva e disattiva la dark-mode
+      function toggleDarkMode() {
+        // HERO
+        document.getElementById("dark-mode-button").classList.toggle("is-dark");
+        document.getElementById("burger").classList.toggle("has-text-white-ter");
+        document.getElementById("hero").classList.toggle("dark-mode");
+        document.getElementById("dark-strong1").classList.toggle("dark-mode");
+        document.getElementById("dark-strong2").classList.toggle("dark-mode");
+        document.getElementById("dark-strong3").classList.toggle("dark-mode");
+        document.getElementById("dark-strong4").classList.toggle("dark-mode");
+        document.getElementById("dark-item1").classList.toggle("dark-mode");
+        document.getElementById("dark-item2").classList.toggle("dark-mode");
+        // document.getElementById("dark-item3").classList.toggle("dark-mode");
+        // document.getElementById("dark-item4").classList.toggle("dark-mode");
+        document.getElementById("navMenu").classList.toggle("dark-mode-menu");
+        document.getElementById("dark-dropdown").classList.toggle("dark-mode");
+        document.getElementById("dark-dropdown-item1").classList.toggle("dark-mode-dropdown-item");
+        // document.getElementById("dark-dropdown-item2").classList.toggle("dark-mode-dropdown-item");
+        document.getElementById("dark-dropdown-item3").classList.toggle("dark-mode-dropdown-item");
+        document.getElementById("dark-dropdown-item4").classList.toggle("dark-mode-dropdown-item");
+        document.getElementById("tg-login-button").classList.toggle("is-dark");
+
+
+        // SERVICES
+        document.getElementById("dark-body").classList.toggle("dark-mode");
+        // document.getElementById("services").classList.toggle("dark-mode");
+        document.getElementById("dark-title1").classList.toggle("has-text-white-ter");
+        document.getElementById("foss").classList.toggle("dark-mode-card");
+        document.getElementById("telegram").classList.toggle("dark-mode-card");
+        document.getElementById("linux").classList.toggle("dark-mode-card");
+        document.getElementById("musica").classList.toggle("dark-mode-card");
+        document.getElementById("skills").classList.toggle("dark-mode-card");
+        document.getElementById("consulenza").classList.toggle("dark-mode-card");
+        document.getElementById("blog").classList.toggle("dark-mode-card");
+        document.getElementById("card-title1").classList.toggle("has-text-success");
+        document.getElementById("card-title2").classList.toggle("has-text-info");
+        document.getElementById("card-title3").classList.toggle("has-text-danger");
+        document.getElementById("card-title4").classList.toggle("has-text-warning");
+        document.getElementById("card-title5").classList.toggle("has-text-primary");
+        // document.getElementById("card-title6").classList.toggle("has-text-white-ter");
+        // document.getElementById("card-title7").classList.toggle("has-text-white-ter");
+
+        // CONTACT
+        document.getElementById("dark-title2").classList.toggle("has-text-white-ter");
+        document.getElementById("dark-title3").classList.toggle("has-text-white-ter");
+        document.getElementById("loghi").classList.toggle("has-background-grey");
+        document.getElementById("consulenza-nome").classList.toggle("dark-mode-card");
+        document.getElementById("consulenza-tel").classList.toggle("dark-mode-card");
+        document.getElementById("consulenza-mail").classList.toggle("dark-mode-card");
+        // document.getElementById("contact").classList.toggle("dark-mode");
+        document.getElementById("dark-mode-button-github").classList.toggle("is-dark");
+        document.getElementById("dark-mode-button-twitter").classList.toggle("is-dark");
+
+        // FOOTER
+        document.getElementById("dark-footer").classList.toggle("dark-mode-footer");
+        document.getElementById("dark-code").classList.toggle("dark-mode-code");
+      };
+
+    </script>
+
+    <!-- Login con Telegram -->
+    <script async src="https://telegram.org/js/telegram-widget.js?14" data-telegram-login="login_franciscopablorusso_it_bot" data-size="small" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+    <script type="text/javascript">
+      function onTelegramAuth(user) {
+        alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+      }
+    </script>
     
-        <!--Questo non so che fa-->
-        <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
-        <!-- <script src="main.js"></script> -->
+  </head>
 
-        <!--Qui puoi modificare la favicon-->
-        <!-- <link rel="shortcut icon" type="image/png" href="/favicon.png"/> -->
-        <!-- <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png"/> -->
+  <body id="dark-body">
+    <!-- HEADER -->
+    <!-- <header class="section has-background-success py-4 has-text-white">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <span class="icon">
+              <i class="far fa-envelope" aria-hidden="true"></i>
+            </span>
+            email@company.com
+          </div>
+          <div class="column">
+            <span class="icon">
+              <i class="fas fa-phone-volume" aria-hidden="true"></i>
+            </span>
+            +44-754-554-222
+          </div>
+          <div class="column has-text-right-tablet">
+            <span class="icon">
+              <i class="fas fa-headphones-alt" aria-hidden="true"></i>
+            </span>
+            Support
+          </div>
+        </div>
+      </div>
+    </header> -->
 
-        <!--Questo collega l'index al file style.css-->
-        <!--link href="style1.css" type="text/css" rel="stylesheet"-->
-
-        <!--Bulma prefer dark mode plugin-->
-        <!-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark" /> -->
-
-        <!--Per linkare le icone di Open Iconic-->
-        <!-- <link href="/dev/open-iconic/font/css/open-iconic.css" rel="stylesheet"> -->
-        <link href="/dev/font/css/open-iconic.css" rel="stylesheet">
-        <!-- <link href="/home/francisco/Documenti/GitHub/franciscopablorusso.github.io/dev/font/css/open-iconic.css" rel="stylesheet"> -->
-
-        <style>
-            /* @media (prefers-color-scheme: dark){} */
-
-            .dark-mode{
-                color: hsl(0, 0%, 96%);
-                background-color: hsl(0, 0%, 21%);
-            }
-
-            .dark-mode-code{
-                color: #da1039;
-                background-color: hsla(0, 2%, 12%, 0.692);
-            }
-
-            .dark-mode-dropdown-item{
-                color: hsl(0, 0%, 96%);
-                background-color: hsl(0, 0%, 21%);
-            }
-
-            .dark-mode-html{
-                color: hsl(0, 0%, 21%);
-            }
-
-            .dark-mode-footer{
-                color: hsl(0, 0%, 96%);
-                background-color: hsl(0, 0%, 19%);
-            }
-
-            /* .dark-mode:hover{
-                color: hsl(0, 0%, 21%);
-            } */
-
-            /* .dark-mode-navbar{
-                background-color: hsl(0, 0%, 21%); 
-                color: hsl(295, 76%, 42%);
-            } */
-        </style>
-
-    </head>
-
-    <body id="dark-body">
-        
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand" id="dark-navbar-brand"> <!--sempre presente-->
-                <div class="navbar-item">
-                    <a class="button is-white" id="dark-mode-button" onclick="toggleDarkMode()">
-                        <span class="icon">
-                            <i class="oi" data-glyph="contrast" title="dark-mode" aria-hidden="true"></i>
-                            <!-- <img class="image" src="/home/francisco/Documenti/GitHub/franciscopablorusso.github.io/dev/open-iconic/svg/contrast.svg"> -->
-                        </span>
-                        <!-- <span>Light/Dark</span> -->
-                    </a>
-                </div>
-                
-                <a role="button" class="navbar-burger has-dropdown burger" id="burger" onclick="toggleBurger()" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
+    <section class="section" id="hero">
+      <div class="container">
+        <!-- NAVBAR -->
+        <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <!-- <a class="navbar-item" href="https://bulma.io">
+              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            </a> -->
+            <div class="navbar-item">
+                <a class="button is-white" id="dark-mode-button" onclick="toggleDarkMode()">
+                    <span class="icon">
+                      <i class="fas fa-adjust"></i>
+                    </span>
                 </a>
             </div>
-
-            <!-- Qui vanno gli script in Javascript -->
-            <script type="text/javascript">
-                // apre e chiude il menu su mobile
-                const toggleBurger = () => {
-                    let burgerIcon = document.getElementById('burger');
-                    let dropMenu = document.getElementById('navbarBasicExample');
-                    burgerIcon.classList.toggle('is-active');
-                    dropMenu.classList.toggle('is-active');
-                };
-
-                // attiva e disattiva la dark-mode
-                function toggleDarkMode() {
-                    document.getElementById("dark-html").classList.toggle("dark-mode-html");                    
-                    document.getElementById("dark-mode-button").classList.toggle("is-dark");
-                    document.getElementById("burger").classList.toggle("has-text-white-ter");
-                    document.getElementById("navbarBasicExample").classList.toggle("dark-mode");
-                    document.getElementById("dark-item1").classList.toggle("dark-mode");
-                    document.getElementById("dark-item2").classList.toggle("dark-mode");
-                    document.getElementById("dark-item3").classList.toggle("dark-mode");
-                    document.getElementById("dark-item4").classList.toggle("dark-mode");
-                    document.getElementById("dark-body").classList.toggle("dark-mode");
-                    //document.getElementById("dark-header").classList.toggle("dark-mode"); //se mi serve un header di un colore diverso
-                    document.getElementById("dark-title").classList.toggle("has-text-white-ter");
-                    document.getElementById("dark-footer").classList.toggle("dark-mode-footer");
-                    document.getElementById("dark-code").classList.toggle("dark-mode-code");
-                    document.getElementById("dark-dropdown").classList.toggle("dark-mode");
-                    document.getElementById("dark-dropdown-item1").classList.toggle("dark-mode-dropdown-item");
-                    document.getElementById("dark-dropdown-item2").classList.toggle("dark-mode-dropdown-item");
-                    document.getElementById("dark-dropdown-item3").classList.toggle("dark-mode-dropdown-item");
-                    document.getElementById("dark-navbar-brand").classList.toggle("dark-mode");
-                    document.getElementById("dark-navbar-item").classList.toggle("dark-mode");
-                };
-            </script>
-
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start" id="dark-navbar-start">
-                    <a class="navbar-item" id="dark-item1" href="index.html">
-                        Home
-                    </a>
-                    <a class="navbar-item" id="dark-item2" href="https://telegra.ph/Francisco-Pablo-Russo-07-14">
-                        About
-                    </a>
-                    <a class="navbar-item" id="dark-item3" href="https://t.me/s/franciscopablorusso_it">
-                        Blog
-                    </a>
-    
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link" id="dark-item4">
-                            Contact
-                        </a>
-                
-                        <div class="navbar-dropdown" id="dark-dropdown">
-                            <a class="navbar-item" id="dark-dropdown-item1" href="mailto:franciscopablorusso@outlook.it">
-                                Email
-                            </a>
-                            <a class="navbar-item" id="dark-dropdown-item2" href="https://github.com/franciscopablorusso">
-                                GitHub
-                            </a>
-                            <a class="navbar-item" id="dark-dropdown-item3" href="https://twitter.com/FranciscoPabloR">
-                                Twitter
-                            </a>
-                        </div>
-                    </div>
+        
+            <a role="button" class="navbar-burger" id="burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+        
+          <div id="navMenu" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-item" id="dark-item1">
+                <span class="icon">
+                  <i class="fas fa-home"></i>
+                </span>
+              </a>
+        
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" id="dark-item2">
+                  <span class="icon">
+                    <i class="fas fa-ellipsis-h"></i>
+                  </span>
+                </a>
+        
+                <div class="navbar-dropdown" id="dark-dropdown">
+                  <a class="navbar-item" href="#more-about-me" id="dark-dropdown-item1">
+                    About
+                  </a>
+                  <!-- <a class="navbar-item" id="dark-dropdown-item2">
+                    Jobs
+                  </a> -->
+                  <a class="navbar-item" href="#contact" id="dark-dropdown-item3">
+                    Contact
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item" href="https://github.com/franciscopablorusso/franciscopablorusso.github.io/issues" id="dark-dropdown-item4">
+                    Report an issue
+                  </a>
                 </div>
+              </div>
             </div>
-
+        
             <div class="navbar-end">
-                <div class="navbar-item" id="dark-navbar-item">
-                    
-                    <!-- Pulsanti standard di registrazione e login -->
-                    <!-- <div class="buttons">
-                        <a class="button is-info is-rounded">
-                          <strong>Sign up</strong>
-                        </a>
-                        <a class="button is-light is-rounded">
-                          Log in
-                        </a>
-                      </div> -->
-
-                    <script async src="https://telegram.org/js/telegram-widget.js?14" data-telegram-login="login_franciscopablorusso_it_bot" data-size="small" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
-                    <script type="text/javascript">
-                        function onTelegramAuth(user) {
-                            alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-                        }
-                    </script>
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-info" href="https://web.telegram.org/k/">
+                    <strong>Sign up</strong>
+                  </a>
+                  <a class="button is-light" id="tg-login-button" onclick="onTelegramAuth()">
+                    <span class="icon">
+                      <i class="fas fa-sign-in-alt"></i>
+                    </span>
+                  </a>
                 </div>
-            </div> 
-        </nav>
-
-        <!--logo, nome del sito e motto-->
-        <div class="content has-text-centered" id="dark-header">
-            <!-- Ho dato attributi a mano alla foto, dovrei implementarlo con bulma se possibile -->
-            <figure class="image" style="max-width: 15%; margin-left: auto; margin-right: auto;">
-                <img class="is-rounded" src="profile-photo.jpg">
-            </figure>
-            <div>
-                <h1 class="title" id="dark-title">franciscopablorusso.it</h1>
-                <h3 class="subtitle has-text-grey" id="dark-subtitle">a new era of automation</h3>
+              </div>
             </div>
+          </div>
+        </nav>
+        <div class="columns pt-6">
+          <div class="column mt-6">
+            <span class="icon has-text-info">
+              <i class="fas fa-terminal fa-lg"></i>
+              <!-- <i class="far fa-chart-bar fa-lg"></i> -->
+            </span>
+            <h1 class="is-size-1">
+              Ciao, sono<br />
+              Francisco Pablo
+            </h1>
+            <p class="mt-2">
+              Sono uno <strong id="dark-strong1">studente</strong> della triennale di <strong id="dark-strong2">Informatica</strong> (L-31) presso 
+              l'<strong id="dark-strong3">Università degli Studi di Catania</strong>.
+              Sono appassionato del rapporto uomo-macchina e delle varie applicazioni che ne derivano (automazione, 
+              domotica, AI, sicurezza informatica, etc.).<br /><br />
+              Questo è il mio sito, totalmente <strong id="dark-strong4">aperto</strong> per chiunque
+              volesse collaborare o semplicemente dare una curiosa occhiata.
+            </p>
+            <div class="field is-grouped mt-4 is-flex">
+                <p class="control">
+                  <a class="button is-warning" href="https://telegra.ph/Francisco-Pablo-Russo-07-14" id="more-about-me">
+                    Di più su di me
+                  </a>
+                </p>
+                <p class="control">
+                  <a class="button is-info" href="doc/web.pdf">
+                    CV
+                  </a>
+                </p>
+              </div>
+          </div>
+          <div class="column mt-6">
+              <figure class="image">
+                <img class="is-rounded" src="img/profile-photo.jpg" alt="Hero image">
+              </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section mt-6" id="services">
+      <div class="container">
+        <div class="has-text-centered">
+          <h2 class="title is-2" id="dark-title1">I miei interessi</h2>
+          <h6 class="subtitle is-6 has-text-grey">
+            qui concentro maggiormente il mio tempo
+          </h6>
+        </div>
+        <div class="columns pt-6">
+          <div class="column">
+            <div class="card" id="foss">
+              <div class="card-content">
+                <div class="has-text-centered">
+                  <span class="icon is-size-1 py-6 my-3">
+                    <i class="fab fa-github-alt"></i>
+                  </span>
+                </div>
+                <p class="title is-4" id="card-title1">
+                  FOSS
+                </p>
+                <div class="content">
+                  Credo nella potenza del codice libero. Tutti i miei progetti lo sono.
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="https://github.com/franciscopablorusso" class="card-footer-item">Scopri di più</a>
+              </footer>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" id="telegram">
+              <div class="card-content">
+                <div class="has-text-centered">
+                  <span class="icon is-size-1 py-6 my-3">
+                    <i class="fab fa-telegram-plane"></i>
+                  </span>
+                </div>
+                <p class="title is-4" id="card-title2">
+                  Telegram
+                </p>
+                <div class="content">
+                  Ne sono un fan sfegatato dal 2016, lo conosco bene come le mie tasche.
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="https://t.me/s/franciscopablorusso_it" class="card-footer-item">Scopri di più</a>
+              </footer>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" id="linux">
+              <div class="card-content">
+                <div class="has-text-centered">
+                  <span class="icon is-size-1 py-6 my-3">
+                    <i class="fab fa-linux"></i>
+                  </span>
+                </div>
+                <p class="title is-4" id="card-title3">
+                  Linux
+                </p>
+                <div class="content">
+                  Il miglior sistema operativo di sempre!
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="https://www.linux.it/distro/" class="card-footer-item">Scopri di più</a>
+              </footer>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" id="musica">
+              <div class="card-content">
+                <div class="has-text-centered">
+                  <span class="icon is-size-1 py-6 my-3">
+                    <i class="fas fa-guitar"></i>
+                  </span>
+                </div>
+                <p class="title is-4" id="card-title4">
+                  Musica
+                </p>
+                <div class="content">
+                  Suono dalla tenera età di 8 anni. Il mio strumento principe è il basso.
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="https://www.youtube.com/watch?v=ljBYVgxY4gc" class="card-footer-item">Scopri di più</a>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <div class="columns pt-6">
+          <div class="column">
+            <div class="column">
+              <div class="card" id="skills">
+                <div class="card-content">
+                  <div class="has-text-centered">
+                    <span class="icon is-size-1 py-6 my-3">
+                      <i class="fas fa-code"></i>
+                    </span>
+                  </div>
+                  <p class="title is-4" id="card-title5">
+                    Le mie skills
+                  </p>
+                  <div class="content">
+                    <div class="columns">
+
+                      <div class="column">
+                        <div class="text">
+                          <p class="mb-0 mt-4">html</p>
+                          <progress class="progress is-success" value="95" max="100">60%</progress>
+                        </div>
+    
+                        <div class="text">
+                          <p class="mb-0 mt-4">css</p>
+                          <progress class="progress is-warning" value="85" max="100">60%</progress>
+                        </div>
+    
+                        <div class="text">
+                          <p class="mb-0 mt-4">javascript</p>
+                          <progress class="progress is-danger" value="75" max="100" id="javascript">60%</progress>
+                        </div>
+    
+                        <div class="text">
+                          <p class="mb-0 mt-4">java</p>
+                          <progress class="progress" value="80" max="100">60%</progress>
+                        </div>
+                      </div>
+
+
+                      <div class="column">
+                        <div class="text">
+                          <p class="mb-0 mt-4">cpp</p>
+                          <progress class="progress is-info" value="97" max="100">60%</progress>
+                        </div>
+    
+                        <div class="text">
+                          <p class="mb-0 mt-4">python</p>
+                          <progress class="progress is-danger" value="80" max="100">60%</progress>
+                        </div>
+    
+                        <div class="text">
+                          <p class="mb-0 mt-4">php</p>
+                          <progress class="progress is-link" max="100">60%</progress>
+                        </div>
+    
+                        <div class="text">
+                          <p class="mb-0 mt-4">mysql</p>
+                          <progress class="progress is-primary" max="100">60%</progress>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <footer class="card-footer">
+                  <a href="#" class="card-footer-item">Learn more</a>
+                </footer> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-grouped mt-6 is-flex service-buttons">
+          <p class="control">
+            <a class="button is-warning" href="#contact">
+              Contattami qui!
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-info" href="https://www.fiverr.com/share/7WYox1">
+              Richiedi un preventivo
+            </a>
+          </p>
         </div>
 
-    
-        <!--descrizione del sito-->
-        <div class="content" style="margin-left: 10px; margin-right: auto; padding: 20px;">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget finibus quam. Vestibulum vel eros et augue imperdiet lacinia in auctor magna. Ut odio nibh, consectetur eget ex dictum, lacinia rhoncus risus. Duis nec ipsum orci. Donec dictum dolor a viverra rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nisi lacus, ullamcorper sed consectetur accumsan, sollicitudin nec sapien. Cras tincidunt venenatis bibendum. Cras tincidunt, dolor vel viverra ultrices, odio metus semper lectus, id ornare diam ipsum et libero. Mauris arcu augue, eleifend nec enim ut, imperdiet porta ligula. Proin viverra orci at dui fringilla auctor. Phasellus quis diam sed felis lobortis convallis.
-            </p>
+        <div class="container mt-6 pt-5 logos">
+          <div class="container">
+            <div class="has-text-centered">
+              <h3 class="title is-3" id="dark-title2">La mia formazione</h3>
+              <h6 class="subtitle is-6 has-text-grey">gli enti e le realtà che mi hanno fatto di crescere</h6>
+            </div>
+          </div>
+          <div class="columns mt-6 is-relative" id="loghi">
+            <div class="column">
+              <img src="img/CCIT_Logo.png" alt="Client logo 1" id="logo1">
+            </div>
+            <div class="column">
+              <img src="img/logo_blue_dark.png" alt="Client logo 2" id="logo2">
+            </div>
+            <div class="column">
+              <img src="img/UniCT-Logo-Nero.png" alt="Client logo 3" id="logo3">
+            </div>
+            <!-- <div class="column">
+              <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo4.jpg" alt="Client logo 4">
+            </div> -->
+          </div>
+        </div>
+          
+
+      </div>
+    </section>
+    <section class="section" id="contact">
+      <div class="container">
+        
+        <div class="has-text-centered mb-6">
+          <h3 class="title is-3" id="dark-title3">Contatti diretti</h3>
+          <h6 class="subtitle is-6 has-text-grey">il modo più semplice e diretto per contattarmi</h6>
         </div>
         
-    
-        <div class="footer" id="dark-footer">
-            <div class="content has-text-centered has-text-weight-bold">
-                <p>Made with ❤ and  
-                <code id="dark-code">code</code> 
-                 by Francisco Pablo Russo © 2021</p>
+        <div class="columns">
+
+          <div class="column">
+            <div class="card" id="consulenza">
+              <header class="card-header has-background-warning">
+                <p class="card-header-title" id="card-title6">
+                  Consulenza gratuita
+                </p>
+              </header>
+              <div class="card-content">
+                <div class="field">
+                  <label for="" class="label" id="consulenza-nome" aria-required="true">Nome</label>
+                  <p class="control">
+                    <input type="text" class="input" placeholder="Mario Rossi">
+                  </p>
+                </div>
+                <div class="field">
+                  <label for="" class="label" id="consulenza-tel">Numero di telefono</label>
+                  <p class="control">
+                    <input type="text" class="input" placeholder="+39 321 123 4567">
+                  </p>
+                </div>
+                <div class="field">
+                  <label for="" class="label" id="consulenza-mail">Email</label>
+                  <p class="control">
+                    <input type="email" class="input" placeholder="mario.rossi@developer.com">
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control">
+                    <button class="button is-warning is-loading" onclick="sendEmail()"> <!-- devo aggiungere la funzione sendEmail() e solo dopo togliere il loading-->
+                      Invia
+                    </button>
+                  </p>                  
+                </div>
+              </div>
+              <footer class="card-footer py-3 my-3 px-3 mx-3">
+                <div class="field is-grouped">
+                  <p class="control">
+                    <a href="https://github.com/franciscopablorusso" class="button is-white" id="dark-mode-button-github">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                    </a>
+                    <a href="https://twitter.com/FranciscoPabloR" class="button is-white" id="dark-mode-button-twitter">
+                      <span class="icon">
+                        <i class="fab fa-twitter"></i>
+                      </span>
+                    </a>
+                  </p>
+                </div>
+              </footer>
             </div>
+          </div>
+
+          <div class="column">
+            <div class="card" id="blog">
+              <header class="card-header has-background-info">
+                <p class="card-header-title has-text-white-ter" id="card-title7">
+                  Il mio blog
+                </p>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                    <script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-post="franciscopablorusso_it/30" data-width="100%" data-dark="0" id="tg-blog"></script>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </section>
     
-    </body>
-    
+    <!-- FOOTER -->
+    <footer class="footer" id="dark-footer">
+        <div class="content has-text-centered has-text-weight-bold">
+          <p>
+            Made with ❤ and  
+            <code id="dark-code">code</code> 
+             by Francisco Pablo Russo © 2021
+          </p>
+        </div>
+    </footer>
+  </body>
 </html>

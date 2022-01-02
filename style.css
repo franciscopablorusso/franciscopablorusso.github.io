@@ -1,132 +1,167 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+/* imposta una foto come sfondo dell'hero */
+/* #hero {
+    background: url('img/gerson-repreza-hniuowbXbBY-unsplash.jpg');
+    height: 1079px;
+    background-position-x: center;
+    background-size: cover;
+} */
 
-nav {
-    border-bottom-style: solid;
-    border-bottom-color: grey;
-    border-bottom-width: 0.5px;
-    height: 100%;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    /*padding-left: 6px;
-    padding-right: 6px;*/
-    margin-top: 0px;
-    margin-bottom: 0px;
-    /*margin-left: 44px;
-    margin-right: 44px;*/
-    background-color: white; /*cambialo in lightgreen se vuoi vedere la navbar*/
-    
-    margin-bottom: 0;
-    border-radius: 0;
-    width: auto;
+/* imposta la navbar trasparente */
+#hero .navbar.is-transparent {
+    background-color: transparent;
 }
 
-ul {
-    /*list-style-position: inside;*/
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    padding-bottom: 0px; /*cambialo a 12px se vuoi la linea grigia sopra la linea azzurra*/
-    text-align: center;
-    /*background-color: lightskyblue;*/
+/* allinea i bottoni di richiesta al centro */
+.service-buttons {
+    justify-content: center !important;
 }
 
-li {
-    display: inline;
-    border: 0px;
-    color: rgb(33, 186, 224);
-    background-color: white; /*cambialo a beige se vuoi vedere i quadranti della lista nella navbar*/
-    block-size: 5px;
-    padding: 12px;
-    width: auto;
-    height: 100%;
+/* aggiunge una linea di demarcazione prima dei loghi delle aziende */
+.logos:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top: 0;
+    border-top: 1px solid #ebebeb;
 }
 
-li.active {
-    border-bottom-style: solid;
-    border-bottom-color: rgb(33, 186, 224);
-    border-bottom-width: 4px;
+/* .section #contact:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top: 0;
+    border-top: 1px solid #ebebeb;
+} */
+
+/* aggiunge uno sfondo alla zona dei contatti */
+/* #contact {
+    background: url(img/paulette-wooten-N8O54MgWKnQ-unsplash.jpg);
+    background-size: cover;
+} */
+
+/* imposta le dimensioni della pagina e i colori dei link nella navbar */
+@media screen and (max-width: 1023px) {
+    .navbar-menu a.has-text-white {
+        color: #4a4a4a !important;
+    }
+    .navbar-menu a.has-text-white:hover {
+        color: #3273dc !important;
+    }
+}
+
+/* cambia il colore dello sfondo della bar interattiva */
+/* #javascript:hover {
+    background-color: orange !important;
+    color:#3273dc !important;
+    color-scheme: purple;
+} */
+
+/* quando si passa sopra col mouse questi comandi fanno cambiare colore alle cards */
+#foss:hover {
+    background-color: hsl(238, 66%, 92%);
+    color: purple;
+}
+
+#telegram:hover {
+    background-color: hsl(206, 70%, 96%);
+    color:  hsl(204, 86%, 53%);
+}
+
+#linux:hover {
+    background-color: hsl(347, 90%, 96%);
+    color:  hsl(348, 100%, 61%);
+}
+
+#musica:hover {
+    background-color: hsl(48, 100%, 96%);
+    color:  hsl(48, 80%, 37%);
+}
+
+#skills:hover {
+    background-color: hsl(141, 23%, 83%);
+    color: hsl(171, 100%, 29%);
 }
 
 
-.nav-item{
-    border-bottom-style: solid;
-    border-bottom-color:rgb(33, 186, 224);
-    border-bottom-width: 4px;
+/* imposta il "colore di telegram" ad un determinato elemento */
+#tg-color {
+    background-color: #0088cc !important;
+    color: hsl(0, 0%, 96%);
 }
 
-li:hover:not(.active) {
-    border-bottom-style: solid;
-    border-bottom-color: rgb(33, 186, 224);
-    border-bottom-width: 4px;
+/* rimuove le decorazioni ai link nel footer delle cards */
+#card-footer-item.a {
+    text-decoration: none;
 }
 
-body {
-    /*text-align: center;*/
-    background-color: white;
+
+/* DARK MODE */
+.dark-mode{
+    color: hsl(0, 0%, 96%);
+    background-color: hsl(0, 0%, 21%);
 }
 
-h1.maintitle {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin-bottom: 2px;
-    margin-top: 8px;
+.dark-mode-code{
+    color: #da1039;
+    background-color: hsla(0, 2%, 12%, 0.692);
 }
 
-h3.mainmotto {
-    font-family:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Light", Helvetica, Arial, Verdana, sans-serif;
-    text-align: center;
-    color: #8c8c8c;
-    margin-top: 2px;
+.dark-mode-dropdown-item{
+    color: hsl(0, 0%, 96%);
+    background-color: hsl(0, 0%, 21%);
 }
 
-p {
-    color: black;
-    /*text-align: left;*/
-    padding: 20px;
+.dark-mode-dropdown-item:hover{
+    color:#3273dc !important;
 }
 
-img, #mainprofilephoto {
-    border-radius: 50%;
-    min-width: 10%;
-    max-width: 15%;
+.dark-mode-html{
+    color: hsl(0, 0%, 21%);
+}
+
+.dark-mode-footer{
+    color: hsl(0, 0%, 96%);
+    background-color: hsl(0, 0%, 19%);
+}
+
+.dark-mode-card{
+    color: hsl(0, 0%, 96%);
+    background-color: hsl(0, 0%, 29%);
+}
+
+#foss .dark-mode{
+    color: hsl(0, 0%, 96%);
+    background-color: hsl(0, 0%, 21%);
+}
+
+/* java progress bar cambia colore */
+.progress::-moz-progress-bar { 
+    background-color: orange;
+}
+
+.dark-mode-menu {
+    background-color: hsl(0, 0%, 21%);
+}
+
+.dark-mode-menu.navbar-menu.is-active {
+    background-color: hsl(0, 0%, 21%);
+}
+
+#loghi {
+    background: url('img/bacheca.jpg');
     height: auto;
-    box-shadow: grey;
-    margin-top: 20px;
-    object-position: center;
+    background-position-x: center;
+    background-size: cover;
+    border-radius: 10px;
 }
 
-.up {
-    z-index: 0;
+.dark-mode.a.card-footer-item{
+    color: hsl(0, 0%, 96%) !important;
+    background-color: hsl(0, 0%, 29%) !important;
 }
 
-.footer {
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: white;
-    border-top-width: 10px;
-    border-top-color: white;
-    width: auto;
-    
-}
-
-div.login {
-    position: right;
-    text-align: right;
-    align-content: right;
-    width: auto;
-    height: 100%;
-    padding-top: 14px;
-    /*padding-left: 40px;*/
-}
-
-.header {
-    text-align: center;
+#tg-blog{
+    width: fit-content;
 }
